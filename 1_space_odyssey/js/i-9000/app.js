@@ -87,22 +87,22 @@ _______/\\\\\________/\\\\\\\\\\\\______/\\\________/\\\______/\\\\\\\\\\\______
     c. the droid should be built in your likeness (a human, with human features, 2 arms, legs etc)
 */
 
-var isAlive;
-var name;
-var suitColor;
-var eyes;
-var eyeColor;
-var hairColor;
-var legs;
-var arms;
-var hands;
-var ears;
-var canWalk;
-var canRun;
-var canFly;
-var hasWeapon;
-var isInGoodMood;
-var hasJetPack;
+var isAlive = true;
+var name = "Human";
+var suitColor = "Violet";
+var eyes = "Two eyes";
+var eyeColor = "Blue";
+var hairColor = "Pink";
+var legs = 10;
+var arms = 20;
+var hands = 50;
+var ears = 2;
+var canWalk = true;
+var canRun = false;
+var canFly = false;
+var hasWeapon = false;
+var isInGoodMood = true;
+var hasJetPack = true;
 
 console.log('\u{1F916} .-.-. Booting .-.-.');
 console.log(
@@ -121,7 +121,7 @@ console.log(
   hasWeapon
 );
 
-if (hasJetPack) {
+if (hasJetPack === true) {
   console.log('JetPack is enabled!!! off I go outside to fix the satellite');
 } else {
   console.log(
