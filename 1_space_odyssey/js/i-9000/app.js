@@ -121,7 +121,7 @@ console.log(
   hasWeapon
 );
 
-if (hasJetPack === true) {
+if (hasJetPack) {
   console.log('JetPack is enabled!!! off I go outside to fix the satellite');
 } else {
   console.log(
@@ -135,7 +135,12 @@ if (hasJetPack === true) {
     a) write an if condition checking if the jet pack is enabled, if true the droid can go outside if false the droid
        cannot go outside, console log the correct log based on that condition.
 */
-console.log('\u{1F6F0} BROKEN SATELLITE::::::');
+
+if (hasJetPack === true) {
+    console.log('The droid can go outside to fix the satellite');
+} else {
+    console.log('\u{1F6F0} BROKEN SATELLITE::::::');
+}
 
 /*
  uncomment these console logs and write your if else statement and use them to console log out the correct statement
@@ -143,6 +148,12 @@ console.log('\u{1F6F0} BROKEN SATELLITE::::::');
  console.log("JetPack is enabled!!! off I go outside to fix the satellite");
  console.log("JetPack NOT enabled, please enable jetPack before doing a space walk");
  */
+ if (hasJetPack === true) {
+    console.log("JetPack is enabled!!! off I go outside to fix the satellite");
+} else {
+    console.log('\u{1F6F0} "JetPack NOT enabled, please enable jetPack before doing a space walk');
+}
+
 
 /*
  3. METEOR SHOWER::::::
@@ -160,7 +171,7 @@ var responses = [
 ];
 
 for (var i = 0; i <= responses.length; i++) {
-  if (responses[i] === responses[3]) {
+  if (responses[i] === responses[2]) {
     console.log(responses[i]);
   }
 }
@@ -178,7 +189,7 @@ for (var i = 0; i <= responses.length; i++) {
 console.log('\u{1F47E} ALIENS SPACE CRAFT ENCROACHING::::::');
 
 // a.
-var enemyCraft = false;
+var enemyCraft = true;
 var photonLaser = true;
 var photonLaserEnabled = true;
 var bullets = 100;
@@ -203,7 +214,15 @@ if (enemyCraft && photonLaser && photonLaserEnabled) {
         ELSE
           console.log("\u{1F9E8} DEAD \u{1F9E8} ");
 */
-
+if (enemyCraft && photonLaser && photonLaserEnabled) {
+    if (bullets >= 100) {
+        for (var i = 1; i <= 100; i++) {
+          console.log(i + "\u{2708} \u{1F525} pew pew pew !! you got them!!");
+        }
+    } else  {
+        console.log("\u{1F9E8} DEAD \u{1F9E8} ");
+    }
+}
 /*
  5. LUNAR LANDING:::::
     We got word of an extra terrestrial sighting on the moon... we have been tasked to land on the moon
