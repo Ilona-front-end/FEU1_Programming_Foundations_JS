@@ -249,7 +249,31 @@ var lunarRadar = {
   approachSpeed: undefined, // "ft per minute"
 };
 
+lunarRadar.isEnabled = true;
+lunarRadar.long = 2;
+lunarRadar.lat = 2;
+lunarRadar.approachSpeed = 201;
+
 // Level 1 convert this psuedocode to functioning code.
+
+if (lunarRadar.isEnabled && lunarRadar.lat && lunarRadar.long) {
+  console.log("\u{1F91F} looking good " + name + " we are making our descent, now entering approach speed");
+  if (lunarRadar.approachSpeed >= 200 && lunarRadar.approachSpeed < 299) {
+    console.log("\u{269B} well done " + name + " we have touched down safely. Lets get some samples and get heck outta here!");
+  } else if (lunarRadar.approachSpeed >= 300) {
+    console.log("\u{1F627} coming in hot " + name + " decrease pitch!");
+  } else if (lunarRadar.approachSpeed >= 400) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  } else if (lunarRadar.approachSpeed >= 500) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  } else if (lunarRadar.approachSpeed >= 600) {
+    console.log("\u{1F627} coming in way too hot " + name + " decrease pitch!");
+  } else if (lunarRadar.approachSpeed <= 100) {
+    console.log("\u{1F47D} hmmm need a bit more heat " + name + " lets increase pitch and we should have a smooth landing");
+  } else {
+    console.log('Please enter an approach speed');
+  }  
+}
 
 /*
 IF lunar radar is enabled && lat is defined and long is defined
