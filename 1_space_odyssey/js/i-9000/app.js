@@ -387,3 +387,10 @@ console.groupEnd();
     Level 2:::::::::
     Create a few methods on your droid object that will allow you to update your object properties like isAlive, eyeColors etc.
   */
+
+    var drawCats = function(howManyTimes) {
+        for (var i = 0; i < howManyTimes; i++) {
+            console.log(i + "=^.^=");
+        }
+    };
+    drawCats(10);
